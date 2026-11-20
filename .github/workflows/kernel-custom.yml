@@ -67,6 +67,23 @@ on:
           - "240 (2025-09)"
           - "246 (2025-12)"
           - "lts (5.10.272)"
+      kernel_repo:
+        description: "内核源码仓库地址"
+        required: false
+        type: string
+        default: "https://android.googlesource.com/kernel/common"
+
+      kernel_commit:
+        description: "固定完整 commit hash"
+        required: false
+        type: string
+        default: ""
+
+      clang_version:
+        description: "指定 Clang 版本"
+        required: false
+        type: string
+        default: "17.0.2"
 
       sub_level_a13_5_10:
         description: "Android 13-5.10 子版本 (选择后自动匹配安全补丁级别；仅 Android 13 + 内核 5.10 时生效)"
